@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  /* navbar top */
+  .navbar-top{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+  .social-link i img{
+    margin-left: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .social-link i img:hover{
+    background-color: rgba(238,224,208);
+    border-radius: 50px;
+  }
+  @media screen and (max-width:420px){
+    .social-link i img{
+        width: 20px;
+    }
+  }
+  .logo h3{
+    font-weight: bold;
+  }
+  @media screen and (max-width:420px){
+    .logo h3{
+        font-size: 20px;
+    }
+  }
+  .icons i img{
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  @media screen and (max-width:420px){
+    .icons i img{
+        width: 20px;
+    }
+  }
+  /* navbar top */
+  @media screen and (max-width:754px){
+    .content-header{
+      font-size: 12px;
+      max-width: 10px;
+      margin-top: 40px;
+    }
+  }
+  @media screen and (max-width:1038px){
+    .content-header{
+      font-size: 15px;
+      max-width: 20px;
+      margin-top: 40px;
+     
+    }
+  }
+  /* main content */
+  @keyframes backgroundSlide {
+    0% {
+      background-image: url(../../public/image/pexels-godisable-jacob-226636-1191531.jpg);
+      background-position: 70%; /* Initial image */
+    }
+    33% {
+      background-image: url(../../public/image/etalage-bijoux-elegants-dans-magasin-luxe_98396-97831.jpg);
+      background-position: 50%; /* Second image */
+    }
+    66% {
+      background-image: url(../../public/image/pexels-jimbear-13787988.jpg);
+      background-position: 30%; /* Third image */
+    }
+    100% {
+      background-image: url(../../public/image/pexels-godisable-jacob-226636-1191531.jpg);
+      background-position: 70%; /* Loop back to the first image */
+    }
+  }
+  
+  /* main content */
+  .main-content {
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    position: absolute;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    
+    /* Animation */
+    animation: backgroundSlide 12s infinite ease-in-out; /* 12s cycle for 3 images */
+  }
+  .back-content{
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.404); 
+  }
+  .content-header{
+    
+    /* color: white; */
+    max-width: 800px;
+    margin-left: 17em;
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px; /* Inner padding */
+    margin-top: 40px;
+  }
+  .content-header h1{
+    font-size: 2.5em; /* Larger title */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 10px; /* Spacing below title */
+  }
+  .content-header p{
+    font-size: 1em; /* Description size */
+      margin-bottom: 20px; /* Spacing below description */
+  }
+  .content-header button{
+    display: inline-block; /* Inline-block for button */
+    border: none;
+    font-weight: bold;
+      padding: 10px 17px; /* Button padding */
+      font-size: 1.2em; /* Button font size */
+      background-color: #c9e6ec; /* Button color */
+      color: black; /* Button text color */
+      text-decoration: none; /* No underline */
+      border-radius: 5px; /* Rounded button */
+      transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  /* navbar */
+  
+  
+  #navbar-color{
+    background-color: #c9e6ec;
+  }
+  .navbar-nav{
+    margin: auto;
+    font-weight: bold;
+  }
+  .nav-link{
+    margin-left: 30px;
+    font-weight: bold;
+    color: black;
+    transition: 0.5s ease;
+    cursor: pointer;
+    
+  }
+  .nav-link:hover{
+    color: green;
+  }
+  /* navbar */
+  
+  
+  
+  .services-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between cards */
+    padding: 40px 20px; /* Padding for the section */
+    position: relative; /* Light background color */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+  
+  .service-card {
+    background-color: #dbf3f893; /* Card background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text */
+    padding: 20px; /* Inner padding */
+    max-width: 200px; /* Limit card width */
+    flex: 1 1 200px; /* Allow cards to grow and shrink */
+  }
+  .service-icon {
+    width: 30px; /* Icon size */
+    margin-bottom: 10px; /* Space below icon */
+  }
+  
+  .service-card h3 {
+    font-size: 1.1em; /* Title size */
+    margin: 10px 0; /* Space above and below title */
+    color: black;
+    font-weight: bold;
+  }
+  
+  .service-card p {
+    font-size: 0.9em; /* Description size */
+    color: #666; /* Description color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-section {
+        padding: 20px 10px; /* Adjust padding on smaller screens */
+    }
+     
+    .service-card {
+        max-width: 90%; /* Increase card width on smaller screens */
+        margin: 10px auto; /* Center cards */
+    }
+  }
+
+
+  /* jewelrySection */
+
+  .jewelry-section {
+    padding: 50px;
+  }
+  
+  .text-part h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .text-part p {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .discover-btn {
+    margin-top: 20px;
+    color: #c99c7d;
+    border-color: #c99c7d;
+  }
+  
+  .image-part {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    bottom: -15px;
+    left: -40px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .icon-and-text {
+    
+    align-items: center;
+  }
+  
+ 
+  .text h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .text p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+
+  /* categorie */
+
+  
+  .products-grid {
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    flex-wrap: wrap;
+    margin-top: 17rem;
+    background-color: white;
+    
+  }
+  
+  .product-card {
+    background: white;
+    padding: 20px;
+    width: 260px;
+    text-align: center;
+    position: relative;
+    box-shadow: 8px 8px 8px #dbd7d763;
+  }
+  
+  .sale-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #7ab4c0;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: 30vh;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    margin-bottom: 10px;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+  }
+  
+  .current-price {
+    font-size: 18px;
+    color: #6f4936;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #324b50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #324b50cb;
+  }

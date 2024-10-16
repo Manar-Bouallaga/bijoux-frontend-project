@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  /* navbar top */
+  .navbar-top{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+  .social-link i img{
+    margin-left: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .social-link i img:hover{
+    background-color: rgba(238,224,208);
+    border-radius: 50px;
+  }
+  @media screen and (max-width:420px){
+    .social-link i img{
+        width: 20px;
+    }
+  }
+  .logo h3{
+    font-weight: bold;
+  }
+  @media screen and (max-width:420px){
+    .logo h3{
+        font-size: 20px;
+    }
+  }
+  .icons i img{
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  @media screen and (max-width:420px){
+    .icons i img{
+        width: 20px;
+    }
+  }
+  /* navbar top */
+  @media screen and (max-width:754px){
+    .content-header{
+      font-size: 12px;
+      max-width: 10px;
+      margin-top: 40px;
+    }
+  }
+  @media screen and (max-width:1038px){
+    .content-header{
+      font-size: 15px;
+      max-width: 20px;
+      margin-top: 40px;
+     
+    }
+  }
+  /* main content */
+  @keyframes backgroundSlide {
+    0% {
+      background-image: url(../../public/image/pexels-godisable-jacob-226636-1191531.jpg);
+      background-position: 70%; /* Initial image */
+    }
+    33% {
+      background-image: url(../../public/image/etalage-bijoux-elegants-dans-magasin-luxe_98396-97831.jpg);
+      background-position: 50%; /* Second image */
+    }
+    66% {
+      background-image: url(../../public/image/pexels-jimbear-13787988.jpg);
+      background-position: 30%; /* Third image */
+    }
+    100% {
+      background-image: url(../../public/image/pexels-godisable-jacob-226636-1191531.jpg);
+      background-position: 70%; /* Loop back to the first image */
+    }
+  }
+  
+  /* main content */
+  .main-content {
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    position: absolute;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    
+    /* Animation */
+    animation: backgroundSlide 12s infinite ease-in-out; /* 12s cycle for 3 images */
+  }
+  /* Main Content */
+.main-content {
+  width: 100%;
+  height: 90vh;
+  position: relative; /* Changed from absolute to relative */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.back-content {
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-header {
+  max-width: 600px;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+/* Carousel Styling */
+.carousel {
+  width: 100%; /* Full-width carousel */
+  height: 70vh; /* Adjust height as needed */
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%; /* Makes images cover the entire carousel */
+  object-fit: cover; /* Ensures images scale properly without distortion */
+}
+
+/* Navbar */
+#navbar-color {
+  background-color: #c9e6ec;
+}
+
+.nav-link {
+  color: black;
+  transition: 0.5s ease;
+}
+
+.nav-link:hover {
+  color: green;
+}
+
+/* Services Section */
+.services-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #dbf3f893;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  max-width: 200px;
+  flex: 1 1 200px;
+}
+
+.service-icon {
+  width: 30px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 1.1em;
+  color: black;
+  font-weight: bold;
+}
+
+.service-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 20px 10px;
+  }
+
+  .service-card {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .social-link i img,
+  .icons i img {
+    width: 20px;
+  }
+
+  .logo h3 {
+    font-size: 20px;
+  }
+}
