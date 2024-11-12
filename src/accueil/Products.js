@@ -1,6 +1,6 @@
 import React from 'react';
 import './accueil.css';
-import { CartProvider, useCart } from "react-use-cart";
+import {useCart } from "react-use-cart";
 
 // const product = [
 //   {id: 22,
@@ -85,7 +85,11 @@ import { CartProvider, useCart } from "react-use-cart";
 
 const Products = ({product}) => {
   const { addItem } = useCart();
-  
+  const handleAddToCart = (product)=>{
+    addItem(product)
+    
+
+  }
 
   return (
     <div className="new-arrival-container">
@@ -104,7 +108,7 @@ const Products = ({product}) => {
             )} */}
             <span className="jewelry-current-price">${produc.price.toFixed(2)}</span>
           </div>
-          <button onClick={() => addItem(produc)} className="jewelry-add-to-cart-btn">Add to cart</button>
+          <button onClick={() => handleAddToCart(produc)} className="jewelry-add-to-cart-btn">Add to cart</button>
         </div>
       ))}
     </div>

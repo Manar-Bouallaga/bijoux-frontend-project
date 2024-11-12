@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./formstyle.css"
 import axios from 'axios'
-import { useCart } from 'react-use-cart'
+import { useNavigate } from 'react-router-dom';
+// import { useCart } from 'react-use-cart'
 export default function FormClient() {
     const [nom, setNom] = useState("")
     const [prenom, setPrenom] = useState("")
@@ -11,7 +12,7 @@ export default function FormClient() {
     const [ville, setVille] = useState("")
     const [code_postal, setCodePostal] = useState("")
     const [pays, setPays] = useState("")
-    
+    const navigate = useNavigate();
     // const [clients, setClient] = useState({});
     const [clientId, setClientId] = useState(null);
 
@@ -56,7 +57,7 @@ export default function FormClient() {
                     console.log(response.data);
                     
                     //  // Redirection vers "/message" après le succès
-                    //  navigate('/message');
+                     navigate('/msg');
                 }).catch((error) => {
                     console.log(error);
                 });

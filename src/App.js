@@ -4,6 +4,7 @@ import ProCat from './accueil/ProCat';
 import { useEffect, useState } from 'react';
 import { CartProvider } from 'react-use-cart';
 import Cart from './accueil/Cart';
+import Msg from './accueil/Msg';
 
 function App() {
   const [product, setProduct] = useState([])
@@ -25,6 +26,7 @@ function App() {
    <CartProvider>
    <BrowserRouter>
    <Routes>
+    <Route path='/msg' element={<Msg/>}></Route>
     <Route path='/' element={<Accueil product={product}/>}></Route>
     <Route path='/procat' element={<ProCat product={product}/>}></Route>
     <Route path='/cart' element={<Cart/>}></Route>

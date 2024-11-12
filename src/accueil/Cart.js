@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { CartProvider, useCart } from "react-use-cart";
+import { useCart } from "react-use-cart";
 import './cart.css';
 import FormClient from './FormClient';
+import EmptyMsg from './EmptyMsg';
 export default function Cart() {
   const [showClientForm, setShowClientForm] = useState(false);
   const handlerRegister = ()=>{
@@ -17,7 +18,7 @@ export default function Cart() {
         
       } = useCart();
       localStorage.setItem("cartItems", JSON.stringify(items));
-      if (isEmpty) return <p>Your cart is empty</p>;
+      if (isEmpty) return <EmptyMsg/>
   return (
     
     <div>

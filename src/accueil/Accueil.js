@@ -8,13 +8,25 @@ import Products from "./Products";
 import AboutUs from "./AboutUs";
 import MoreHelp from "./MoreHelp";
 import Footer from "./Footer";
-import Cart from "./Cart";
+
 import { CartProvider, useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
 
 export default function Accueil({product}) {
     const [categories ,setCategoris] = useState([])
+    const [countPanier ,setCountPanier] = useState(0)
+     // recuperer le nomber de items dans cart 
+     const {
+        totalItems
+     } = useCart();
     
+
+     useEffect(() => {
+        console.log("Total Items: ", totalItems);
+        setCountPanier(totalItems || 0);
+    }, [totalItems]);
+
+
     // l'api pour les categories
     useEffect(
         function(){
@@ -27,13 +39,7 @@ export default function Accueil({product}) {
             .catch(error=>console.error("erreur : ",error))
         },[]
     )
-    // recuperer le nomber de items dans cart 
-    const {
-        
-        totalUniqueItems,
-        
-      } = useCart();
-    
+   
     return (
         <>
         <div className="">
@@ -52,7 +58,7 @@ export default function Accueil({product}) {
                     <i><img src="./image/heart.png" alt="Favorites" width="20px" /></i>
                     <span id="panier">
                     <Link to="cart">
-                    <span style={{"textDecoration": "none","color": "black","fontWeight": "700","position": "relative","left":" 10px"}}>{totalUniqueItems}</span>
+                    <span style={{"textDecoration": "none","color": "black","fontWeight": "700","position": "relative","left":" 10px"}}>{countPanier}</span>
                     <i><img src="./image/shopping-cart.png" alt="Cart" width="25px" /></i>
 
                     </Link>
@@ -79,22 +85,22 @@ export default function Accueil({product}) {
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Home</a>
+                                    <a className="nav-link" href="#ee">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Shop</a>
+                                    <a className="nav-link" href="ee">Shop</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Top Chair</a>
+                                    <a className="nav-link" href="ee">Top Chair</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Chair</a>
+                                    <a className="nav-link" href="#ee">Chair</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Brands</a>
+                                    <a className="nav-link" href="#ee">Brands</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Contact</a>
+                                    <a className="nav-link" href="#e">Contact</a>
                                 </li>
                             </ul>
 
