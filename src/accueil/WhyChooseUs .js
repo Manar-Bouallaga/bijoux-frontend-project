@@ -4,37 +4,37 @@ import './accueil.css';
 const WhyChooseUs = () => {
   return (
     <section className="why-choose-us">
-      <h2>Why Choose Us</h2>
-      <h3>Bright and shiny jewelry made just for you</h3>
+      <h2>Pourquoi Nous Choisir</h2>
+      <h3>Des bijoux lumineux et élégants, créés pour vous.</h3>
       <p className="subtitle">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+        Chez Bijoux Shop, nous allions matériaux de qualité, expertise artisanale et service client exceptionnel pour vous offrir une expérience unique.
       </p>
       <div className="features">
         <div className="feature">
           <div className="icon">
-            <img src="./image/bijoux.png" alt="Good Material Icon" />
+            <img src="./image/bijoux.png" alt="Icône de matériaux de qualité" />
           </div>
-          <h4>Good Material</h4>
+          <h4>Matériaux de Qualité</h4>
           <p>
-            Bibendum dictumst morbi risus in augue himenaeos nunc nisi faucibus.
+            Nous sélectionnons soigneusement les meilleurs matériaux pour garantir la durabilité et la beauté intemporelle de nos créations.
           </p>
         </div>
         <div className="feature">
           <div className="icon">
-            <img src="./image/earrings.png" alt="Professional Expert Icon" />
+            <img src="./image/earrings.png" alt="Icône d'expertise professionnelle" />
           </div>
-          <h4>Professional Expert</h4>
+          <h4>Experts Professionnels</h4>
           <p>
-            Bibendum dictumst morbi risus in augue himenaeos nunc nisi faucibus.
+            Nos artisans expérimentés travaillent avec précision et passion pour concevoir des pièces qui reflètent votre style unique.
           </p>
         </div>
         <div className="feature">
           <div className="icon">
-            <img src="./image/volume-on_17818606.png" alt="24/7 Premium Support Icon" />
+            <img src="./image/volume-on_17818606.png" alt="Icône de support premium" />
           </div>
-          <h4>24/7 Premium Support</h4>
+          <h4>Support Premium 24/7</h4>
           <p>
-            Bibendum dictumst morbi risus in augue himenaeos nunc nisi faucibus.
+            Notre équipe est toujours disponible pour répondre à vos questions et vous aider à chaque étape de votre expérience.
           </p>
         </div>
       </div>
