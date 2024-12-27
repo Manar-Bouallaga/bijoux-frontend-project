@@ -3,6 +3,7 @@ import { useCart } from "react-use-cart";
 import './cart.css';
 import FormClient from './FormClient';
 import EmptyMsg from './EmptyMsg';
+
 export default function Cart() {
   const [showClientForm, setShowClientForm] = useState(false);
   const handlerRegister = ()=>{
@@ -20,7 +21,65 @@ export default function Cart() {
       localStorage.setItem("cartItems", JSON.stringify(items));
       if (isEmpty) return <EmptyMsg/>
   return (
+    <>
+    <div className="navbar-top container">
+                    <div className="social-link">
+                        {/* <i><img src="./image/twitter.png" alt="Twitter" width="30px" /></i>
+                        <i><img src="./image/facebook.png" alt="Facebook" width="30px" /></i>
+                        <i><img src="./image/google-plus.png" alt="Google+" width="30px" /></i> */}
+                    </div>
+                    <div className="logo">
+                        <h3>Bijoux Shop</h3>
+                    </div>
+                    
+                </div>
+                {/* Navbar Top */}
     
+                {/* Main Content */}
+                
+                
+                
+                    <nav className="navbar navbar-expand-md" id="navbar-color">
+                        <div className="container">
+                            {/* Toggler/collapsibe Button */}
+                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                                <span>
+                                   <i><img src="./image/menu.png" alt="Menu" width="30px" /></i>
+                                    
+                                </span>
+                            </button>
+    
+                            {/* Navbar Links */}
+                            <div className="collapse navbar-collapse" id="collapsibleNavbar">
+                                <ul className="navbar-nav">
+                                    <li className="nav-item">
+                                        <a className="nav-link" href='/'>Home</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href='/shop'>Shop</a>
+                                    </li>
+                                    
+                                    <li className="nav-item">
+                                        <a className="nav-link" href='/cart'>My Cart</a>
+                                    </li>
+                                    {/* <li className="nav-item">
+                                        <a className="nav-link" href="#ee">Brands</a>
+                                    </li> */}
+                                    <li className="nav-item">
+                                        <a className="nav-link" href='/contact'>Contact</a>
+                                    </li>
+                                </ul>
+    
+                            </div>
+                            
+                    </div>
+                    </nav>
+                    <div className="cart-banner">
+        <div className="banner-cart">
+          <h1>My Cart</h1>
+        </div>
+      </div>         
+                            
     <div>
         {
           showClientForm===false ? 
@@ -76,14 +135,8 @@ export default function Cart() {
 
                     {/* end item */}
 
-                   
-
                     <hr class="my-4"/>
 
-                    <div class="pt-5">
-                      <h6 class="mb-0"><a href="#!" class="text-body"><i
-                            class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
-                    </div>
                   </div>
                 </div>
                 <div class="col-lg-4 bg-grey">
@@ -96,25 +149,7 @@ export default function Cart() {
                       
                     </div>
 
-                    {/* <h5 class="text-uppercase mb-3">Shipping</h5> */}
-
-                    {/* <div class="mb-4 pb-2">
-                      <select class="select">
-                        <option value="1">Standard-Delivery- €5.00</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                      </select>
-                    </div> */}
-
-                    {/* <h5 class="text-uppercase mb-3">Give code</h5> */}
-
-                    {/* <div class="mb-5">
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea2">Enter your code</label>
-                      </div>
-                    </div> */}
+      
 
                     <hr class="my-4"/>
 
@@ -139,5 +174,49 @@ export default function Cart() {
           <FormClient items={items}/>
         }
     </div>
+    <footer className="footer">
+                <div className="footer-container">
+                    <div className="footer-section">
+                        <h3>Head Office</h3>
+                        <ul>
+                            <li>
+                                <span className="icon"><img src='./image/gps_15949802.png' width={'20px'} alt=''/></span> Jl. Compokla Wonga No.22, Jakarta
+                            </li>
+                            <li>
+                                <span className="icon"><img src='./image/email_4546924.png' width={'20px'} alt=''/></span> Support@yourdomain.tld
+                            </li>
+                            <li>
+                                <span className="icon"><img src='./image/telephone_16617661.png' width={'20px'} alt=''/></span> +62 21 2002 2012
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="footer-section">
+                        <h3>Support</h3>
+                        <ul>
+                            <li>Help Center</li>
+                            <li>Ticket</li>
+                            <li>Support Center</li>
+                            <li>Faq</li>
+                        </ul>
+                    </div>
+
+                    <div className="footer-section newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <form>
+                            <input type="email" placeholder="Email" />
+                            <button className="jewelry-add-to-cart-btn">Sign up</button>
+                        </form>
+                        <br></br>
+                        <div className='social-link'>
+                            <i><img src="./image/twitter.png" alt="Twitter" width="30px" /></i>
+                            <i><img src="./image/facebook.png" alt="Facebook" width="30px" /></i>
+                            <i><img src="./image/google-plus.png" alt="Google+" width="30px" /></i>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    </>
   )
 }

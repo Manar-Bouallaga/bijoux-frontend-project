@@ -1,4 +1,5 @@
 import React from 'react';
+import './accueil.css';
 
 const Footer = () => {
   return (
@@ -39,7 +40,14 @@ const Footer = () => {
             <input type="email" placeholder="Email" />
             <button className="jewelry-add-to-cart-btn">Sign up</button>
           </form>
+          <br></br>
+          <div className='social-link'>
+          <i><img src="./image/twitter.png" alt="Twitter" width="30px" /></i>
+          <i><img src="./image/facebook.png" alt="Facebook" width="30px" /></i>
+          <i><img src="./image/google-plus.png" alt="Google+" width="30px" /></i>
+          </div>
         </div>
+        
       </div>
     </footer>
   );

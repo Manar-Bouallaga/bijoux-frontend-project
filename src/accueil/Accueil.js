@@ -42,22 +42,23 @@ export default function Accueil({product}) {
    
     return (
         <>
+        
         <div className="">
             {/* Navbar Top */}
             <div className="navbar-top container">
                 <div className="social-link">
-                    <i><img src="./image/twitter.png" alt="Twitter" width="30px" /></i>
+                    {/* <i><img src="./image/twitter.png" alt="Twitter" width="30px" /></i>
                     <i><img src="./image/facebook.png" alt="Facebook" width="30px" /></i>
-                    <i><img src="./image/google-plus.png" alt="Google+" width="30px" /></i>
+                    <i><img src="./image/google-plus.png" alt="Google+" width="30px" /></i> */}
                 </div>
                 <div className="logo">
                     <h3>Bijoux Shop</h3>
                 </div>
                 <div className="icons">
-                    <i><img src="./image/search.png" alt="Search" width="20px" /></i>
-                    <i><img src="./image/heart.png" alt="Favorites" width="20px" /></i>
+                    <i></i>
+                    <i></i>
                     <span id="panier">
-                    <Link to="cart">
+            <Link to="cart" style={{"textDecoration": "none"}}>
                     <span style={{"textDecoration": "none","color": "black","fontWeight": "700","position": "relative","left":" 10px"}}>{countPanier}</span>
                     <i><img src="./image/shopping-cart.png" alt="Cart" width="25px" /></i>
 
@@ -85,22 +86,20 @@ export default function Accueil({product}) {
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#ee">Home</a>
+                                    <a className="nav-link" href='/'>Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="ee">Shop</a>
+                                    <a className="nav-link" href='/shop'>Shop</a>
                                 </li>
+                                
                                 <li className="nav-item">
-                                    <a className="nav-link" href="ee">Top Chair</a>
+                                    <a className="nav-link" href='/cart'>My Cart</a>
                                 </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#ee">Chair</a>
-                                </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <a className="nav-link" href="#ee">Brands</a>
-                                </li>
+                                </li> */}
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#e">Contact</a>
+                                    <a className="nav-link" href='/contact'>Contact</a>
                                 </li>
                             </ul>
 
@@ -143,7 +142,7 @@ export default function Accueil({product}) {
                     <WhyChooseUs />
                     <BijouxShop />
                     <CartProvider>
-                        <Products product={product}/>
+                        <Products  product={product}/>
                         
                     </CartProvider>
                     {/* <Products product={product}/> */}

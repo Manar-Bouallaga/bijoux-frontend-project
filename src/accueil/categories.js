@@ -1,33 +1,6 @@
-import React, { useState } from 'react';
 import './accueil.css';
 import { Link } from 'react-router-dom';
 
-// const categories = [
-//   {
-//     id: 1,
-//     name: 'Larimar Gemstone Handmade Gift Jewelry ',
-//     img: './image/photographie-femmes-luxe-modernes-bijoux-elegants_1288657-190820.avif',
- 
-//   },
-//   {
-//     id: 2,
-//     name: 'Silver Square Cubic Zirconia Necklace',
-//     img: './image/topaz-brooch-clean-white-background_1170858-4447.jpg',
-   
-//   },
-//   {
-//     id: 3,
-//     name: 'Elegant Women Silver Blue Sapphire',
-//     img: './image/drop-earring-isolated-white-background_1162228-5542.jpg',
-//   },
-//   {
-//     id: 4,
-//     name: 'Round Ceramics Simple White Black',
-//     img: './image/jewelry-isolated-white-background_641503-374545.jpg',
-//   },
-// ];
-
-// procat
 const Categories = ({categories}) => {
   const selectedId = (catId) => {
     // Nous avons besoin de transferer le id de categorie selectionner a la composant plat 
