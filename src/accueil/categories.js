@@ -9,29 +9,37 @@ const Categories = ({categories}) => {
   
   return (
     <section className="product-section">
-      <div className='categorie-bg'>
-      <div className="header">
-        <h2>Discover Categories</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <div className='categorie-bg'>
+    <div className="header">
+      <h2>Explore Our Categories</h2>
+      <p>Find the perfect match for your style with our diverse range of categories.</p>
+    </div>
+  </div>
+  <div className="products-grid">
+    {categories.map((categorie) => (
+      <div key={categorie.id} className="product-card">
+        <img 
+          src={`image/${categorie.img}`} 
+          alt={categorie.title} 
+          className="product-image" 
+        />
+        <h3 className="product-name">{categorie.title}</h3>
+        <div className="product-price">
+          {/* Add price or related details here if available */}
+        </div>
+        <Link to="/procat">
+          <button 
+            onClick={() => selectedId(categorie.id)} 
+            className="add-to-cart-btn"
+          >
+            See More
+          </button>
+        </Link>
       </div>
-      </div>
-      <div className="products-grid">
-      
-        {categories.map((categorie ) => (
-            
-          <div key={categorie.id} className="product-card">
-            <img src={`image/${categorie.img}`} alt={categorie.title} className="product-image" />
-            <h3 className="product-name">{categorie.title}</h3>
-            <div className="product-price">
-             
-            </div>
-            <Link to="/procat">
-            <button onClick={()=>selectedId(categorie.id)} className="add-to-cart-btn">See more</button>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </section>
+    ))}
+  </div>
+</section>
+
   );
 };
 

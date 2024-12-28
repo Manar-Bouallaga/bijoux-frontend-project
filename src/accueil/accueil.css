@@ -84,7 +84,7 @@
       background-position: 70%; /* Initial image */
     }
     33% {
-      background-image: url(../../public/image/etalage-bijoux-elegants-dans-magasin-luxe_98396-97831.jpg);
+      background-image: url(../../public/image/back-2.jpg);
       background-position: 50%; /* Second image */
     }
     66% {
@@ -118,8 +118,8 @@
     background-color: rgba(0, 0, 0, 0.404); 
   }
   .content-header{
-    max-width: 1100px;
-    padding: 55px;
+    max-width: 840px;
+    padding: 60px;
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -131,9 +131,9 @@
   }
   .content-header p{
     font-size: 1em; /* Description size */
-      margin-bottom: 20px; /* Spacing below description */
+      margin-bottom: 25px; /* Spacing below description */
   }
-  .content-header button{
+  .content-buttonS{
     display: inline-block; /* Inline-block for button */
     border: none;
     font-weight: bold;
@@ -271,13 +271,13 @@
   
  
   .text h5 {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: bold;
     color: #444;
   }
   
   .text p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #666;
   }
   
